@@ -5,7 +5,6 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from utils.data_handler import DataHandler
 
-
 def _ch_now():
     """Returns current Swiss time as a timezone-naive pandas Timestamp, floored to seconds."""
     return pd.Timestamp(datetime.now(ZoneInfo('Europe/Zurich')).replace(tzinfo=None)).floor('s')
